@@ -1,0 +1,58 @@
+.body{
+  background: #0F1317; 
+}
+
+
+.sidebar{
+  position: absolute;
+  width: 314px;
+  height: 1144px;
+  left: 22px;
+  top: 18px;
+}
+
+.controlpanel{
+  position: absolute;
+  width: 240px;
+  height: 78px;
+  left: 58px;
+  top: 198px;
+  
+  background: #0B0F12;
+  border-radius: 3px;  
+}
+
+.planthumi{
+  position: absolute;
+  width: 240px;
+  height: 78px;
+  left: 58px;
+  top: 360px;
+  
+  background: #0B0F12;
+  border-radius: 3px;  
+}
+
+.airtemp{
+  position: absolute;
+  width: 240px;
+  height: 78px;
+  left: 58px;
+  top: 522px;
+  
+  background: #0B0F12;
+  border-radius: 3px;  
+}
+
+.airhumi{
+
+  position: absolute;
+  width: 240px;
+  height: 78px;
+  left: 58px;
+  top: 684px;
+  
+  background: #0B0F12;
+  border-radius: 3px;  
+}
+

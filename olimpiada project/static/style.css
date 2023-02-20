@@ -1,0 +1,494 @@
+.menuframe{
+  position: absolute;
+  width: 330px;
+  height: 1270px;
+  left: 27px;
+  top: 24px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+
+.logo{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  left: 16px;
+  top: 16px;
+
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.logotext{
+  margin-top: 20px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.CPbutton{
+  text-decoration: none;
+  text-transform: none;
+  position: absolute;
+  width: 260px;
+  height: 82px;
+  left: 34px;
+  top: 186px;
+
+  background: linear-gradient(96.03deg, #99FF69 0%, #65FFA3 100%);
+  border-radius: 5px;
+  color: #000000;
+  text-align: center;
+  font-size:large ;
+  padding-top: 23px;
+
+}
+
+.CPbutton:hover{
+
+  background: #84ff9e;
+}
+
+.cpimg{
+  margin-left: -189px;
+  margin-top: -8px;  
+}
+
+.CPbuttontext{
+  margin-left: 18px;
+  margin-top: -36px;
+}
+
+
+
+.PHbutton{
+  text-decoration: none;
+  text-transform: none;
+  position: absolute;
+  width: 260px;
+  height: 82px;
+  margin-left: 34px;
+  margin-top: 320px;
+
+  background: #f4f4f4;
+  border-radius: 5px;
+  color: #000000;
+  text-align: center;
+  font-size:large ;
+  padding-top: 23px;
+}
+
+.atimg{
+  margin-left: -189px;
+  margin-top: -8px;  
+}
+
+.PHbutton:hover{
+
+  background: #84ff9e;
+}
+
+.ATbutton{
+  text-decoration: none;
+  text-transform: none;
+  position: absolute;
+  width: 260px;
+  height: 82px;
+  margin-left: 34px;
+  margin-top: 460px;
+
+  border-radius: 5px;
+  background: #f4f4f4;
+  color: #000000;
+  text-align: center;
+  font-size:large ;
+  padding-top: 23px;
+}
+
+.ATbutton:hover{
+
+  background: #84ff9e;
+}
+
+.AHbutton{
+  text-decoration: none;
+  text-transform: none;
+  position: absolute;
+  width: 260px;
+  height: 82px;
+  margin-left: 34px;
+  margin-top: 600px;
+
+  border-radius: 5px;
+  background: #f4f4f4;
+  color: #000000;
+  text-align: center;
+  font-size:large ;
+  padding-top: 23px;
+}
+
+.AHbutton:hover{
+
+  background: #84ff9e;
+}
+
+.forkcontrol{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 884px;
+  height: 600px;
+  left: 382px;
+  top: 24px;
+  border-radius: 5px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.FKtext{
+  font-size: x-large;
+  margin-top: 13px;
+  margin-left: 37px;
+}
+
+.OpenBTN{
+  position: absolute;
+  width: 240px;
+  height: 80px;
+  margin-left: 33px;
+  margin-top: 138px;
+  border-radius: 3px;
+
+  background: #FFFFFF;
+  border: 2px solid #959595;
+  border-radius: 5px;
+}
+
+.img{
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.FKbuttontext{
+  margin-top: -35px;
+  margin-left: 100px; 
+  font-size: large;
+}
+
+.CloseBTN{
+  position: absolute;
+  width: 240px;
+  height: 80px;
+  margin-left: 33px;
+  margin-top:40px;
+  border-radius: 6px;
+
+
+  background: #FFFFFF;
+  border: 2px solid #959595;
+  border-radius: 5px;
+}
+
+.CloseBTN:hover{
+  background: #84ff9e;
+}
+
+.OpenBTN:hover{
+  background: #84ff9e;
+}
+
+.OTinput{
+  position: absolute;
+  width: 240px;
+  height: 180px;
+  margin-left: 330px;
+  margin-top: 40px;
+  border-radius: 3px;
+  
+  background: #FFFFFF;
+  border: 2px solid #959595;
+  border-radius: 5px;
+
+}
+
+.OTtext{
+  font-size: x-large;
+  margin-top: -37px;
+  margin-left: 330px;
+}
+
+.ATindicat1{
+  position: absolute;
+  width: 108px;
+  height: 84px;
+  margin-left: 618px;
+  margin-top: 40px;
+  border-radius: 3px;
+
+  background: #f4f4f4;
+}
+
+.ATindicat2{
+  position: absolute;
+  width: 108px;
+  height: 84px;
+  margin-left: 747px;
+  margin-top: 40px;
+  border-radius: 3px;
+
+  background: #f4f4f4;
+}
+
+.ATindicat3{
+  position: absolute;
+  width: 108px;
+  height: 84px;
+  margin-left: 618px;
+  margin-top: 138px;
+  border-radius: 3px;
+
+  background: #f4f4f4;
+}
+
+.ATindicat4{
+  position: absolute;
+  width: 108px;
+  height: 84px;
+  margin-left: 747px;
+  margin-top: 138px;
+  border-radius: 3px;
+
+  background: #f4f4f4;
+}
+
+.INDtext{
+  font-size: x-large;
+  margin-top: -37px;
+  margin-left: 621px;
+}
+
+.ATgraph{
+  margin-top: 0px;
+}
+
+.ATcanvas{
+  position: absolute;
+  width: 884px;
+  height: 318px;
+  margin-left: 0px;
+  margin-top: 235px;
+}
+
+.HumiCNTRL{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 884px;
+  height: 630px;
+  margin-left: 385px;
+  margin-top: 663px;
+  border-radius: 5px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.ind1txt{
+  margin-top: 4px;
+  margin-left: 8px;
+  font-size: medium;
+}
+
+.AHindicationsV1{
+  margin-left: 36px;
+  margin-top: -5px;
+  font-size: x-large;
+}
+
+.OptimalAirHumiINP{
+    font-size: xxx-large;
+    width: 90px;
+    height: 75px;
+    margin-top: -13px;
+    margin-left: 127px;
+    border-color: #00000000;
+}
+
+.OTinputCOMENTS{
+  margin-top: 48px;
+  font-size: xxx-large;
+  margin-left: 31px;
+}
+
+.OTinputFORM{
+  margin-top: -60px;
+
+}
+
+.OHinputCOMENTS1{
+  position: absolute;
+  top: 160px;
+  left: 755px;
+  font-size: xxx-large;
+}
+
+.OHinputFORM1{
+  position: absolute;
+  top: 160px;
+  left: 755px;
+  font-size: xxx-large;
+}
+
+.OptimalAirTEMPINP{
+  font-size: xxx-large;
+  width: 90px;
+  height: 75px;
+  margin-top: -13px;
+  margin-left: 75px;
+  border-color: #00000000;
+}
+
+
+.res{
+  margin-top: 20px;
+  margin-left:-10px;
+}
+
+.wateringcontainer{
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1250px;
+  height: 1270px;
+  left:1290px;
+  top: 24px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+
+
+}
+
+.OAHtextdec{
+  margin-top: 13px;
+  margin-left: 37px;
+  font-size: x-large;
+}
+
+.OPHdev1{
+  margin-top: -37px;
+  margin-left: 330px;
+  font-size: x-large;  
+}
+
+.OPHinputFORM1{
+  margin-top: 160px;
+  margin-left: 755px;
+  font-size: xxx-large;
+}
+
+.OAHtextdec2{
+  margin-top: 234px;
+  margin-left: 37px;
+  font-size: x-large;
+}
+
+.OPHdev2{
+  margin-top: -37px;
+  margin-left: 330px;
+  font-size: x-large;  
+}
+
+.block1{
+  width: 540px;
+  height: 200px;  
+  margin-top: 0px;
+}
+
+.block2{
+  width: 540px;
+  height: 200px;  
+  margin-top: 117px;
+}
+
+.block3{
+  width: 540px;
+  height: 200px;  
+  margin-top: -845px;
+  margin-left: 652px;
+}
+
+.block4{
+  width: 540px;
+  height: 200px;  
+  margin-top: 117px;
+  margin-left: 652px;
+}
+
+.OHBinput{
+  position: absolute;
+  width: 240px;
+  height: 80px;
+  margin-left: 330px;
+  margin-top: 40px;
+  border-radius: 3px;
+  
+  background: #FFFFFF;
+  border: 2px solid #959595;
+  border-radius: 5px;
+
+}
+
+.OptimalPlantHumiINP{
+  font-size: xxx-large;
+  width: 90px;
+  height: 52px;
+  margin-top: 0px;
+  margin-left: 127px;
+  border-color: #00000000;
+}
+
+
+.OPHinputCOMENTS {
+  margin-top: -4px;
+  font-size: xxx-large;
+  margin-left: 31px;
+}
+
+.PHindicat6{
+  width: 240px;
+  height: 84px;
+  margin-left: 332px;
+  margin-top: 138px;
+  border-radius: 3px;
+
+  background: #f4f4f4;
+}
+
+.PHgraph {
+  margin-top: -217px;
+  margin-left: -641px;
+}
+
+.py-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* top: 0; */
+  /* bottom: 0; */
+  left: 0;
+  /* right: 0; */
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms;
+  visibility: hidden;
+  color: visible;
+  /* opacity: 1; */
+}
