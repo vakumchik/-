@@ -10,31 +10,31 @@ formatted_date = '"'+ now.strftime('%Y-%m-%d %H:%M:%S')+'"'
 print(formatted_date)
 
 #?----------------------------------INSERT T-----------------------------------------------------------------------------------------------------------------------
-def insert_T(ind_id , indication , time):
+def insert_T(ind_id , indication , time , mean):
 
     connection = pymysql.connect(host = host,port = 3306,user = user,password = password,database = 'gholimp',cursorclass = pymysql.cursors.DictCursor)
 
     with connection.cursor() as cursor:
-        insert_query = f"INSERT INTO `T_indication`(ind_id , indication , time) VALUES ({ind_id} , {indication} , {time});"
+        insert_query = f"INSERT INTO `T_indication`(ind_id , indication, mean_values , time) VALUES ({ind_id} , {indication} , {mean} , {time});"
         cursor.execute(insert_query)
         connection.commit()
 
 #?----------------------------------INSERT H----------------------------------------------------------------------------------------------------------------------
-def insert_H(ind_id , indication , time):
+def insert_H(ind_id , indication , time , mean):
   
     connection = pymysql.connect(host = host,port = 3306,user = user,password = password,database = 'gholimp',cursorclass = pymysql.cursors.DictCursor)
 
     with connection.cursor() as cursor:
-        insert_query = f"INSERT INTO `H_indication`(ind_id , indication , time) VALUES ({ind_id} , {indication} , {time});"
+        insert_query = f"INSERT INTO `H_indication`(ind_id , indication, mean_values , time) VALUES ({ind_id} , {indication} , {mean} , {time});"
         cursor.execute(insert_query)
         connection.commit()
 #?----------------------------------INSERT Hb--------------------------------------------------------------------------------------------------------------------
-def insert_Hb(ind_id , indication , time):
+def insert_Hb(ind_id , indication , time , mean):
   
     connection = pymysql.connect(host = host,port = 3306,user = user,password = password,database = 'gholimp',cursorclass = pymysql.cursors.DictCursor)
 
     with connection.cursor() as cursor:
-        insert_query = f"INSERT INTO `Hb_indication`(ind_id , indication , time) VALUES ({ind_id} , {indication} , {time});"
+        insert_query = f"INSERT INTO `Hb_indication`(ind_id , indication , mean_values , time) VALUES ({ind_id} , {indication} , {mean} , {time});"
         cursor.execute(insert_query)
         connection.commit()
 
@@ -86,24 +86,30 @@ try:
         #     create_table_query = "CREATE TABLE `T_indication`(id int AUTO_INCREMENT ," \
         #                          "ind_id tinyint," \
         #                          "indication float ," \
+        #                          "mean_values float ," \
         #                          "time datetime , PRIMARY KEY (id));" 
         #     cursor.execute(create_table_query)
+        #     connection.commit()
         #     print('2 [!]TableCreated[!]')
 
         # with connection.cursor() as cursor:
         #     create_table_query = "CREATE TABLE `H_indication`(id int AUTO_INCREMENT ," \
         #                          "ind_id tinyint," \
         #                          "indication float ," \
+        #                          "mean_values float ," \
         #                          "time datetime , PRIMARY KEY (id));" 
         #     cursor.execute(create_table_query)
+        #     connection.commit()
         #     print('2 [!]TableCreated[!]')
 
         # with connection.cursor() as cursor:
         #     create_table_query = "CREATE TABLE `Hb_indication`(id int AUTO_INCREMENT ," \
         #                          "ind_id tinyint," \
         #                          "indication float ," \
+        #                          "mean_values float ," \
         #                          "time datetime , PRIMARY KEY (id));" 
         #     cursor.execute(create_table_query)
+        #     connection.commit()            
         #     print('2 [!]TableCreated[!]')
 
 

@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import asyncio
 import time
 
-from get_data import get_H , get_Hb , get_T
+from get_data_from_api import get_H , get_Hb , get_T
 
 
 
@@ -80,8 +80,6 @@ def stuff13():
 def stuff14():
 
   return jsonify(result=get_Hb(1)[1])
-
-
 
 
 
