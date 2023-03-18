@@ -289,8 +289,8 @@
   position: absolute;
   width: 884px;
   height: 630px;
-  margin-left: 385px;
-  margin-top: 639px;
+  margin-left: 383px;
+  margin-top: 665px;
   border-radius: 5px;
   
   background: #FFFFFF;
@@ -491,4 +491,136 @@
   visibility: hidden;
   color: visible;
   /* opacity: 1; */
+}
+
+.firstandseccondTgraph{
+
+  position: absolute;
+  width: 1139px;
+  height: 610px;
+  left: 377px;
+  top: 24px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 3px
+  }
+
+.thirdandfourthTgraph{
+  position: absolute;
+  width: 1139px;
+  height: 610px;
+  left: 377px;
+  top: 683px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 3px  
+}
+
+.fifthandsixthTgraph{
+  position: absolute;
+  width: 1139px;
+  height: 610px;
+  left: 0px;
+  top: 6262px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 3px  
+}
+
+.ATindication1 {
+  position: absolute;
+  width: 281px;
+  height: 281px;
+  margin-left: 843px;
+  margin-top: 15px;
+  border-radius: 3px;
+  background: #f4f4f4;
+}
+
+.ATindication2 {
+  position: absolute;
+  width: 281px;
+  height: 281px;
+  margin-left: 843px;
+  margin-top: 314px;
+  border-radius: 3px;
+  background: #f4f4f4;
+}
+
+.ind1txt{
+  margin-top: 4px;
+  margin-left: 8px;
+  font-size: medium;
+}
+
+.indications1txt{
+  margin-top: 4px;
+  margin-left: 8px;
+  font-size: medium;
+}
+
+.ATinV1{
+  margin-left: 109px;
+  margin-top: 88px;
+  font-size: xxx-large;
+}
+
+.indications2txt{
+  margin-top: 4px;
+  margin-left: 8px;
+  font-size: medium;
+}
+
+.ATinV2{
+  margin-left: 109px;
+  margin-top: 88px;
+  font-size: xxx-large;
+}
+
+.AT1canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: -643px;
+}
+
+.AT2canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: -345px;
+}
+
+.AT4canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: 315px;
+}
+
+.AT3canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: 15px;
+}
+
+.AT5canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: 500px;
+}
+
+.AT6canvas{
+  position: absolute;
+  width: 820px;
+  height: 281px;
+  margin-left: 13px;
+  margin-top: 700px;
 }

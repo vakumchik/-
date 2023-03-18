@@ -7,6 +7,13 @@ def get_time():
   date = '"'+ now.strftime('%Y-%m-%d %H:%M:%S')+'"'
   return date
 
+def getmean_T():
+  t = 0
+  for i in range(1 , 5):
+    response = requests.get(url = f'https://dt.miet.ru/ppo_it/api/temp_hum/{i}')
+    t += int([eval(response.text).get('temperature')])
+    return t/4
+
 #?----------------------------------GET T-----------------------------------------------------------------------------------------------------------------------
 def get_T(device_id):
   response = requests.get(url = f'https://dt.miet.ru/ppo_it/api/temp_hum/{device_id}')  #температура

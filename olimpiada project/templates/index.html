@@ -8,12 +8,49 @@
   <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+  <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+
   <script src="
   https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js
   "></script>
 
   <script>
     document.getElementById("result").innerHTML;
+</script>
+
+<script>
+  document.getElementById("fkopen0").innerHTML;
+</script>
+
+<script>
+  document.getElementById("fkopen1").innerHTML;
+</script>
+
+<script>
+  document.getElementById("humi0").innerHTML;
+</script>
+
+<script>
+  document.getElementById("humi1").innerHTML;
+</script>
+
+
+<script>
+  document.getElementById("phumi3").innerHTML;
+</script>
+
+<script>
+  document.getElementById("phumi4").innerHTML;
+</script>
+
+<script>
+  document.getElementById("phumi5").innerHTML;
+</script>
+
+<script>
+  document.getElementById("phumi6").innerHTML;
 </script>
 
 <script>
@@ -112,6 +149,445 @@
         }
 
           $('#result2').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/open_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#fkopen0').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/close_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#fkopen1').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#humi0').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi0').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#humi1').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi1').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p2_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi2').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p2_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi3').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p3_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi4').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p3_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi5').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p4_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi6').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p4_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi7').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p5_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi8').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p5_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi9').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p6_on_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi10').text(data.result);
+      });
+      
+      };
+  
+      
+      
+      function stopTextColor() {
+      clearInterval(intervalID);
+      }
+
+</script>
+
+
+<script type="text/javascript">
+  var intervalID = setInterval(update_values,1000);
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  function update_values() {
+          $.getJSON($SCRIPT_ROOT + '/p6_off_ed',
+              
+      function(data) {
+        
+        air_t[1].push(data.result);
+        if(air_t[1].length == 11){
+
+          air_t[1] = air_t[0].slice(1);
+        }
+
+          $('#phumi11').text(data.result);
       });
       
       };
@@ -484,6 +960,16 @@
   ]
 </script>
 
+<script>
+  var air_t = [
+    [], // data #1
+    [], // data #2
+    [], // data #3
+    [], // data #4
+    []  // time
+  ]
+</script>
+
 <script type="text/javascript">
   function getMeanOfAirHumidity(){
     if (air_humidity_arr[0].length > 0){
@@ -503,7 +989,7 @@
   }
     return NaN
   }
-  var intervalChartUpdate = setInterval(update_values,1000);
+  var intervalChartUpdate = setInterval(update_values,2000);
   function update_values() {
         if (getMeanOfAirHumidity() != NaN){
           //lineChart.data.datasets[0].data.push(1);
@@ -561,6 +1047,12 @@
   ]
 </script>
 
+<script>
+  var fk = [
+    [], // data #1
+  ]
+</script>
+
 <script type="text/javascript">
   function getMeanOfAirtemp(){
     if (air_temp_arr[0].length > 0){
@@ -580,7 +1072,7 @@
   }
     return NaN
   }
-  var intervalChartUpdate = setInterval(update_values,1000);
+  var intervalChartUpdate = setInterval(update_values,2000);
   function update_values() {
         if (getMeanOfAirtemp() != NaN){
           //lineChart.data.datasets[0].data.push(1);
@@ -629,7 +1121,7 @@
   }
     return NaN
   }
-  var intervalChartUpdate = setInterval(update_values,1000);
+  var intervalChartUpdate = setInterval(update_values,2000);
   function update_values() {
         if (getMeanOfPlantHumi() != NaN){
           //lineChart.data.datasets[0].data.push(1);
@@ -655,8 +1147,20 @@
 
 </script>
 
+
+
 <body onload="update_values();">
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+{% for mesage in get_flashed_messages() %}
+
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{mesage}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+{% endfor %}
 
 <!-- SIDEBAR ----------------------->
   <div class="menuframe">
@@ -685,13 +1189,6 @@
   </div>
 <!-- SIDEBAR ------------------>
 
-<py-env>
-  - request
-</py-env>
-
-
-
-
 
 <!-- Fork control ------------------>
 
@@ -700,14 +1197,45 @@
   <div class="forkcontrol">
     <div class="FKtext">Fork Control</div>
 
+    <script type=text/javascript>
+      $(function() {
+        $('a#test1').on('click', function(e) {
+          e.preventDefault()
+          $.getJSON('/closefork',
+              function(data) {
+            //do nothing
+          });
+          return false;
+        });
+      });
+    </script>
 
-    <button class="OpenBTN" pys-onClick="fork_open"><svg class="img" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <script type=text/javascript>
+      $(function() {
+        $('a#test2').on('click', function(e) {
+          e.preventDefault()
+          $.getJSON('/openfork',
+              function(data) {
+            //do nothing
+          });
+          return false;
+        });
+      });
+    </script>
+
+    
+
+    <form>
+      <a href=# id=test1>
+    <button class="OpenBTN"><svg class="img" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M18 10H9V7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7H17C17 4.243 14.757 2 12 2C9.243 2 7 4.243 7 7V10H6C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10ZM10.061 15.499C10.1839 15.0284 10.4739 14.6187 10.8769 14.3463C11.2798 14.074 11.7681 13.9576 12.2506 14.019C12.7331 14.0803 13.1767 14.3152 13.4986 14.6798C13.8206 15.0444 13.9988 15.5136 14 16C13.9994 16.3497 13.9067 16.6932 13.7311 16.9956C13.5556 17.2981 13.3034 17.549 13 17.723V20H11V17.723C10.6216 17.5062 10.3248 17.1712 10.1552 16.7694C9.9856 16.3677 9.9525 15.9214 10.061 15.499Z" fill="black"/>
-      </svg><div class="FKbuttontext">Close</div></button>
+      </svg><span class="FKbuttontext" id="fkopen1"></span></button></a></form>
 
-    <div class="CloseBTN"><svg  class = "img" width="48" height="48" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <form>
+      <a href=# id=test2>
+    <button class="CloseBTN"><svg  class = "img" width="48" height="48" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M4 8V6C4 4.4087 4.63214 2.88258 5.75736 1.75736C6.88258 0.632141 8.4087 0 10 0C11.5913 0 13.1174 0.632141 14.2426 1.75736C15.3679 2.88258 16 4.4087 16 6V8H17C17.5304 8 18.0391 8.21071 18.4142 8.58579C18.7893 8.96086 19 9.46957 19 10V18C19 18.5304 18.7893 19.0391 18.4142 19.4142C18.0391 19.7893 17.5304 20 17 20H3C2.46957 20 1.96086 19.7893 1.58579 19.4142C1.21071 19.0391 1 18.5304 1 18V10C1 8.9 1.9 8 3 8H4ZM9 14.73V17H11V14.73C11.3813 14.5099 11.6793 14.1701 11.8478 13.7633C12.0162 13.3566 12.0458 12.9056 11.9319 12.4803C11.8179 12.055 11.5668 11.6793 11.2175 11.4112C10.8682 11.1432 10.4403 10.9979 10 10.9979C9.55973 10.9979 9.13177 11.1432 8.78248 11.4112C8.43319 11.6793 8.1821 12.055 8.06815 12.4803C7.9542 12.9056 7.98376 13.3566 8.15224 13.7633C8.32072 14.1701 8.61872 14.5099 9 14.73ZM7 6V8H13V6C13 5.20435 12.6839 4.44129 12.1213 3.87868C11.5587 3.31607 10.7956 3 10 3C9.20435 3 8.44129 3.31607 7.87868 3.87868C7.31607 4.44129 7 5.20435 7 6Z" fill="black"/>
-      </svg><div class="FKbuttontext">Open</div></div>
+      </svg><span class="FKbuttontext" id="fkopen0"></span></button></a></form>
 
 
 
@@ -722,17 +1250,17 @@
     
 
     <div class="ATindicat1">
-      <div class = 'ind1txt'>id4</div>
+      <div class = 'ind1txt'>id1</div>
       <div class = 'AHindicationsV1'><span id='result' class="res">?</span></div>
     </div>
 
     <div class="ATindicat2">
-      <div class = 'ind1txt'>id4</div>
+      <div class = 'ind1txt'>id2</div>
       <div class = 'AHindicationsV1'><span id='result2' class="res">?</span></div>
     </div>
 
     <div class="ATindicat3">
-      <div class = 'ind1txt'>id4</div>
+      <div class = 'ind1txt'>id3</div>
       <div class = 'AHindicationsV1'><span id='result3' class="res">?</span></div>
     </div>
 
@@ -769,16 +1297,201 @@
 <div class="HumiCNTRL">
   <div class="FKtext">Humi Control</div>
 
+  <script type=text/javascript>
+    $(function() {
+      $('a#test3').on('click', function(e) {
+        e.preventDefault()
+        $.getJSON('/onairhumi',
+            function(data) {
+          //do nothing
+        });
+        return false;
+      });
+    });
+  </script>
 
-  <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script type=text/javascript>
+  $(function() {
+    $('a#test4').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offairhumi',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering1on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi1',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering1off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi1',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering2on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi2',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering2off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi2',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering3on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi3',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering3off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi3',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering4on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi4',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering4off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi4',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering5on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi5',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering5off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi5',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering6on').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/onplanthumi6',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+<script type=text/javascript>
+  $(function() {
+    $('a#watering6off').on('click', function(e) {
+      e.preventDefault()
+      $.getJSON('/offplanthumi6',
+          function(data) {
+        //do nothing
+      });
+      return false;
+    });
+  });
+</script>
+
+  <form>
+  <a href=# id=test3>
+  <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
     </svg>
-    <div class="FKbuttontext">On</div></div>
+   <span class="FKbuttontext" id="humi0"></span></button></a></form>
 
-  <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=test4>
+      <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
     </svg>
-    <div class="FKbuttontext">Off</div></div>
+    <span class="FKbuttontext" id="humi1"></span></button></a></form>
 
 
 
@@ -858,7 +1571,7 @@
     data:{
       labels:[],
       datasets:[{
-        label: "Data",
+        label: "Mean air humi",
             borderColor: gradientStroke,
             pointBorderColor: gradientStroke,
             pointBackgroundColor: gradientStroke,
@@ -926,7 +1639,7 @@ let lineChart2 = new Chart(ctx2,{
   data:{
     labels:[],
     datasets:[{
-      label: "Data",
+      label: "Mean air temperatyre",
           borderColor: gradientStroke,
           pointBorderColor: gradientStroke,
           pointBackgroundColor: gradientStroke,
@@ -985,7 +1698,7 @@ let lineChart2 = new Chart(ctx2,{
 
 <div class = 'OHinputFORM1'>
   <form  method="post">
-    <input  onkeydown = 'performPostOAH1()'  name = 'OptimalAirTempINP' type = 'int'  id = 'OptimalAirTempINP' class="OptimalAirTEMPINP" placeholder=0 ><br> 
+    <input  ondrop = 'performPostOAH1()'  name = 'OptimalAirTempINP' type = 'int'  id = 'OptimalAirTempINP' class="OptimalAirTEMPINP" placeholder=0 ><br> 
   </form>
 </div>
 </div>
@@ -1008,15 +1721,21 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 1</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering1on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi0">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering1off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi1">off</span></button></a></form>
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1040,15 +1759,22 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 2</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering2on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi2">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering2off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi3">off</span></button></a></form>
+    
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1072,15 +1798,22 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 3</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering3on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi4">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering3off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi5">off</span></button></a></form>
+    
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1104,15 +1837,21 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 4</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering4on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi6">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering4off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi7">off</span></button></a></form>
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1136,15 +1875,21 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 5</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering5on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi8">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering5off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi9">off</span></button></a></form>
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1169,15 +1914,21 @@ let lineChart2 = new Chart(ctx2,{
     <div class="OAHtextdec">Watering device 6</div>  
     <div class="OPHdev1">Optimal plant humi</div>  
 
-    <div class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
-      </svg>
-    <div class="FKbuttontext">On</div></div>
 
-    <div class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <form>
+      <a href=# id=watering6on>
+      <button class="OpenBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 20C15 19.7348 14.8946 19.4804 14.7071 19.2929C14.5196 19.1054 14.2652 19 14 19H13V17H17C17.5304 17 18.0391 16.7893 18.4142 16.4142C18.7893 16.0391 19 15.5304 19 15V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V15C5 15.5304 5.21071 16.0391 5.58579 16.4142C5.96086 16.7893 6.46957 17 7 17H11V19H10C9.73478 19 9.48043 19.1054 9.29289 19.2929C9.10536 19.4804 9 19.7348 9 20H2V22H9C9 22.2652 9.10536 22.5196 9.29289 22.7071C9.48043 22.8946 9.73478 23 10 23H14C14.2652 23 14.5196 22.8946 14.7071 22.7071C14.8946 22.5196 15 22.2652 15 22H22V20H15ZM7 15V5H17V15H7ZM8 10.37L9.24 9.13L10.93 10.83L14.76 7L16 8.5L10.93 13.57L8 10.37Z" fill="black"/>
+        </svg>
+       <span class="FKbuttontext" id="phumi10">On</span></button></a></form>
+
+
+       <form>
+        <a href=# id=watering6off>
+        <button class="CloseBTN"><svg class = 'img' width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14.59 6L12 8.59L9.41 6L8 7.41L10.59 10L8 12.59L9.41 14L12 11.41L14.59 14L16 12.59L13.41 10L16 7.41L14.59 6ZM17 3C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V15C19 15.5304 18.7893 16.0391 18.4142 16.4142C18.0391 16.7893 17.5304 17 17 17H13V19H14C14.2652 19 14.5196 19.1054 14.7071 19.2929C14.8946 19.4804 15 19.7348 15 20H22V22H15C15 22.2652 14.8946 22.5196 14.7071 22.7071C14.5196 22.8946 14.2652 23 14 23H10C9.73478 23 9.48043 22.8946 9.29289 22.7071C9.10536 22.5196 9 22.2652 9 22H2V20H9C9 19.7348 9.10536 19.4804 9.29289 19.2929C9.48043 19.1054 9.73478 19 10 19H11V17H7C6.46957 17 5.96086 16.7893 5.58579 16.4142C5.21071 16.0391 5 15.5304 5 15V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17Z" fill="black"/>
       </svg>
-    <div class="FKbuttontext">Off</div></div>
+      <span class="FKbuttontext" id="phumi11">off</span></button></a></form>
 
     <div class="OHBinput">
       <div class = 'OPHinputCOMENTS'>
@@ -1223,7 +1974,7 @@ let lineChart2 = new Chart(ctx2,{
     data:{
       labels:[],
       datasets:[{
-        label: "Data",
+        label: "Mean plant humi",
             borderColor: gradientStroke,
             pointBorderColor: gradientStroke,
             pointBackgroundColor: gradientStroke,
